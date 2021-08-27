@@ -1,13 +1,9 @@
-import Head from 'next/head'
+import Head from '../components/Head'
 
 export default function Home() {
   return (
     <section>
-      <Head>
-        <title>Coffee Template</title>
-        <meta name="description" content="A open source template" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head />
       <main>
         <h1>Hello</h1>
       </main>
