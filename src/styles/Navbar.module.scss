@@ -1,3 +1,68 @@
+@import "./mediaquery.module.scss";
+
 .navbar {
-  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20vh;
+  padding: 0 10rem;
+  @include respond(phone) {
+    padding: 0 7rem;
+  }
+
+  &Logo {
+    position: relative;
+    min-width: 20%;
+    @include respond(tab-port) {
+      min-width: 45%;
+    }
+  }
+
+  &Nav {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 3px;
+    font-size: 3.5rem;
+    @include respond(tab-port) {
+      position: absolute;
+      right: 0;
+      top: 15vh;
+      height: 90vh;
+      width: 70%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgb(235, 235, 235);
+      z-index: 1000;
+      transform: translateX(100%);
+      transition: all 0.5s ease-in-out;
+    }
+    & li {
+      @include respond(tab-port) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.navbarIcon {
+  display: none;
+  font-size: 3.5rem;
+  cursor: pointer;
+  @include respond(tab-port) {
+    display: block;
+  }
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.active {
+  transform: translateX(0%);
+  & li {
+    opacity: 1;
+  }
 }
