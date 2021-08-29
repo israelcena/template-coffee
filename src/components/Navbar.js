@@ -16,18 +16,21 @@ export default function Navbar() {
 
   return (
     <nav className={Styles.navbar}>
-      <Link href="/">
-        <div className={Styles.navbarLogo}>
-          <Image
-            src={navLogo}
-            alt="Logo"
-            layout="responsive"
-            width={240}
-            height={139}
-            className={Styles.navbarLogoImage}
-          />
-        </div>
-      </Link>
+      <div className={Styles.navbarLogo}>
+        <Link href="/">
+          <a>
+            <Image
+              src={navLogo}
+              alt="Logo"
+              layout="responsive"
+              width={240}
+              height={139}
+              className={Styles.navbarLogoImage}
+            />
+          </a>
+        </Link>
+      </div>
+
       <ul className={Styles.navbarNav} ref={navRef}>
         <li>
           <Link href="/">Home</Link>
