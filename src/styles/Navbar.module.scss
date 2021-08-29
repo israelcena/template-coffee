@@ -41,6 +41,29 @@
       transition: all 0.5s ease-in-out;
     }
     & li {
+      position: relative;
+      padding: 2rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+
+      &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: rgba(73, 44, 17, 0.816);
+        border-radius: 10px;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-in;
+      }
+
       list-style: none;
       @include respond(tab-port) {
         opacity: 0;
