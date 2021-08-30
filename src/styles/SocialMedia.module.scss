@@ -1,0 +1,19 @@
+.socialMediaContainer {
+  color: rgba(84, 50, 19, 0.816);
+  position: fixed;
+  top: 45vh;
+  right: 0;
+  margin-right: 4rem;
+
+  & > * {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      filter: opacity(0.6);
+    }
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

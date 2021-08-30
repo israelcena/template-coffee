@@ -42,13 +42,18 @@
     }
     & li {
       position: relative;
-      padding: 2rem;
+      padding: 1rem;
       margin: 0 0.5rem;
       cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: rgb(255, 255, 255);
+      }
 
       &:hover::before {
         transform: scaleX(1);
-        transform-origin: bottom left;
+        transform-origin: bottom right;
       }
 
       &::before {
@@ -56,12 +61,12 @@
         display: block;
         position: absolute;
         inset: 0;
-        background: rgba(73, 44, 17, 0.816);
+        background: rgba(84, 50, 19, 0.816);
         border-radius: 10px;
         z-index: -1;
         transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-in;
+        transform-origin: bottom left;
+        transition: transform 0.3s;
       }
 
       list-style: none;

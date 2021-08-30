@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from '../components/Head'
 import Navbar from '../components/Navbar'
+import SocialMedia from '../components/SocialMedia'
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           />
         </div>
       </main>
+      <SocialMedia />
       <footer>
         <p>Bye</p>
       </footer>
