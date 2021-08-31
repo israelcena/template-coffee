@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { useRef, useCallback } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 
 import navLogo from '../../public/images/logo.png'
 import { FaBars } from 'react-icons/fa'
@@ -13,6 +13,17 @@ export default function Navbar() {
   const handleClick = useCallback(() => {
     navRef.current.classList.toggle(Styles.active)
   }, [navRef])
+  const handleClickOutside = useCallback(
+    (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        navRef.current.classList.remove(Styles.active)
+      }
+    },
+    [navRef]
+  )
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true)
+  }, [handleClickOutside])
 
   return (
     <nav className={Styles.navbar}>
