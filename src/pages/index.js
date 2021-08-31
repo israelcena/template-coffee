@@ -6,7 +6,7 @@ import SocialMedia from '../components/SocialMedia'
 
 export default function Home() {
   return (
-    <section>
+    <section className="container">
       <Head />
       <header>
         <Navbar />
