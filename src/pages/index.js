@@ -24,13 +24,16 @@ export default function Home() {
           </p>
           <Link href="/cafe">Leia Mais</Link>
         </div>
-        <div>
-          <Image
-            src="/images/coffee1.png"
-            alt="Coffee 1"
-            width={500}
-            height={500}
-          />
+        <div className="image-box">
+          <div className="image-circle"></div>
+          <div className="image-image">
+            <Image
+              src="/images/coffee1.png"
+              alt="Coffee 1"
+              width={500}
+              height={500}
+            />
+          </div>
         </div>
       </main>
       <ul className="thumb">
@@ -38,31 +41,28 @@ export default function Home() {
           <Image
             src="/images/thumb1.png"
             alt="thumb image"
-            width={50}
-            height={50}
+            width={130}
+            height={150}
           />
         </li>
         <li>
           <Image
             src="/images/thumb2.png"
             alt="thumb image"
-            width={50}
-            height={50}
+            width={130}
+            height={150}
           />
         </li>
         <li>
           <Image
             src="/images/thumb3.png"
             alt="thumb image"
-            width={50}
-            height={50}
+            width={130}
+            height={150}
           />
         </li>
       </ul>
       <SocialMedia />
-      <footer>
-        <p>Bye</p>
-      </footer>
     </section>
   )
 }
