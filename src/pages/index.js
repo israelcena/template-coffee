@@ -33,6 +33,32 @@ export default function Home() {
           />
         </div>
       </main>
+      <ul className="thumb">
+        <li>
+          <Image
+            src="/images/thumb1.png"
+            alt="thumb image"
+            width={50}
+            height={50}
+          />
+        </li>
+        <li>
+          <Image
+            src="/images/thumb2.png"
+            alt="thumb image"
+            width={50}
+            height={50}
+          />
+        </li>
+        <li>
+          <Image
+            src="/images/thumb3.png"
+            alt="thumb image"
+            width={50}
+            height={50}
+          />
+        </li>
+      </ul>
       <SocialMedia />
       <footer>
         <p>Bye</p>
