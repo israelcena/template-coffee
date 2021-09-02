@@ -12,11 +12,12 @@ export default function Home() {
         <Navbar />
       </header>
       <main>
-        <div>
-          <h2>
-            Esse café não é apenas um café <br />
-            Esse é o <span>Café Gostoso</span>
-          </h2>
+        <div className="heading-primary">
+          <h1>
+            Esse café não é apenas
+            <br /> um café! Esse é o
+            <span className="heading-primary-emphasis">Café Gostoso</span>
+          </h1>
           <p>
             Feito com todo o carinho e dedicação, nossa equipe de cientistas
             está trabalhando para criar o melhor café do mundo. Contudo, estamos
