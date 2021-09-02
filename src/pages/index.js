@@ -22,7 +22,9 @@ export default function Home() {
             está trabalhando para criar o melhor café do mundo. Contudo, estamos
             no caminho devido ao grande número de pedidos.
           </p>
-          <Link href="/cafe">Leia Mais</Link>
+          <button className="btn" onSubmit="/">
+            Leia Mais
+          </button>
         </div>
         <div className="image-box">
           <div className="image-circle"></div>
